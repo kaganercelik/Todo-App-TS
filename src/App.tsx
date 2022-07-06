@@ -14,7 +14,7 @@ const App: FC = () => {
 				<div className="mt-9">
 					<InputField />
 				</div>
-				<div className="mt-9  ">
+				<div className="mt-9 mx-20 ">
 					<TodoList />
 				</div>
 			</div>

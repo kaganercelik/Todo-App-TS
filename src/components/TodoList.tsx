@@ -20,16 +20,16 @@ const TodoList: FC = () => {
 	};
 
 	return (
-		<div className="grid grid-cols-2 gap-4 justify-items-center">
+		<div className="grid grid-cols-2 gap-4 justify-items-center ">
 			{todoContext?.todos.map((todo) => (
 				<div
-					className="card w-96 bg-base-100 shadow-xl hover:shadow hover:shadow-cyan-500/50"
+					className="hero min-w-max bg-base-100 shadow-xl hover:shadow hover:shadow-cyan-500/50 rounded-md"
 					key={todo.id}
 				>
-					<div className="card-body flex justify-center ">
+					<div className="hero-content flex justify-around ">
 						<AnimatePresence>
 							<motion.div
-								className="flex justify-center my-auto"
+								className="my-auto "
 								animate={{
 									opacity: 1,
 								}}
@@ -64,23 +64,22 @@ const TodoList: FC = () => {
 										{todo.todo}
 									</motion.p>
 								)}
-
-								<div className="button-group ">
-									<button
-										className="btn-sm btn-ghost"
-										onClick={() => handleDelete(todo.id)}
-									>
-										<GiTireIronCross />
-									</button>
-									<button
-										className="btn-sm btn-ghost"
-										onClick={() => handleDone(todo.id)}
-									>
-										<MdOutlineDone />
-									</button>
-								</div>
 							</motion.div>
 						</AnimatePresence>
+						<div className="button-group ">
+							<button
+								className="btn-sm btn-ghost"
+								onClick={() => handleDelete(todo.id)}
+							>
+								<GiTireIronCross />
+							</button>
+							<button
+								className="btn-sm btn-ghost"
+								onClick={() => handleDone(todo.id)}
+							>
+								<MdOutlineDone />
+							</button>
+						</div>
 					</div>
 				</div>
 			))}
