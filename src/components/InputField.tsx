@@ -97,19 +97,7 @@ const InputField: FC = () => {
 				</form>
 			</div>
 
-			{/* <div className="flex justify-center w-full mt-10 relative">
-			<motion.input
-				type="text"
-				className="input input-bordered input-md w-7/12 h-16 focus:input-info focus:shadow-lg focus:shadow-cyan-500/50"
-				placeholder="Enter the task"
-				onChange={(e) => setText(e.target.value)}
-				variants={todoContext?.inputVariants}
-				whileFocus={"whileFocus"}
-			/>
-			<button className="absolute top-0 right-12 rounded-l-none w-36 btn btn-lg">
-				GO
-			</button>
-		</div> */}
+			
 		</div>
 	);
 };
